@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frau Mustermann – Unterrichtsmaterialien</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300;1,9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+
+<!-- LANDING -->
+<div id="landing">
+  <div class="glow ga"></div><div class="glow gb"></div>
+  <header class="land-header">
+    <div><div class="land-name">Frau Mustermann</div><div class="land-school">Gymnasium Beispielstadt</div></div>
+    <button class="theme-toggle" onclick="toggleTheme()"><span id="ltgi">🌙</span><span id="ltgl"> Dark Mode</span></button>
+  </header>
+  <div class="hero">
+    <div class="eyebrow">Unterrichtsmaterialien</div>
+    <h1>Willkommen,<br><em>liebe Schülerinnen<br>und Schüler.</em></h1>
+    <p class="hero-sub">Alle Materialien – geordnet nach Jahrgangsstufe, Fach und Thema.</p>
+    <div class="divider"></div>
+    <div class="land-stufen" id="land-stufen"></div>
+    <button class="cta" onclick="openApp(null)">Alle Materialien <span class="cta-arr">→</span></button>
+  </div>
+  <div class="stats-bar" id="stats-bar"></div>
+</div>
+
+<!-- APP -->
+<div id="app">
+  <div class="topbar">
+    <button class="back-btn" onclick="goBack()">← Start</button>
+    <div class="wordmark">Unterrichts<span>materialien</span></div>
+    <div class="stufe-tabs" id="stufe-tabs"></div>
+    <div class="srch-wrap">
+      <svg class="srch-ico" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" id="search" placeholder="Suchen …">
+    </div>
+    <button class="tgl-btn" onclick="toggleTheme()" id="atgl">🌙</button>
+  </div>
+  <div class="fach-bar" id="fach-bar"><span class="fach-lbl">Fach</span></div>
+  <div class="layout">
+    <nav class="sidebar" id="sidebar"><div class="sb-hint">Jahrgangsstufe und<br>Fach wählen</div></nav>
+    <div class="content" id="content">
+      <div class="st-screen"><div class="st-ico">📚</div><h3>Jahrgangsstufe wählen</h3><p>Wähle oben deine Jahrgangsstufe, dann ein Fach und ein Thema.</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- FLASHCARD MODAL -->
+<div id="fc-overlay" style="display:none;opacity:0">
+  <div id="fc-modal"></div>
+</div>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
